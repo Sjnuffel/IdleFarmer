@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82dc9d3ca3b7c6944aa24415738f364c, type: 3}
+  m_Name: SweetPotato
+  m_EditorClassIdentifier: 
+  plantName: Potato
+  plantDescription: Just once I would like something different then a root vegetable.
+    One can dream, can't he?
+  plantRank: 2
+  plantPrice: 350
+  harvestPoints: 5
+  stageTime: 10
+  shopIcon: {fileID: -1282046005, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  seedBagIcon: {fileID: 1470739439, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  cropSignSmall: {fileID: 2070646332, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  cropsignLarge: {fileID: -520050052, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  growthSprites:
+  - {fileID: 1480162792, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: -871803451, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: 119582850, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: -450661097, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: -2136238922, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: 1532625313, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}

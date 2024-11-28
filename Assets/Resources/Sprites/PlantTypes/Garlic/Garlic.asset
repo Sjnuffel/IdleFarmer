@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82dc9d3ca3b7c6944aa24415738f364c, type: 3}
+  m_Name: Garlic
+  m_EditorClassIdentifier: 
+  plantName: Garlic
+  plantDescription: You could say this is a step down from turnips, you know. Size
+    wise. Are we gonna make it?
+  plantRank: 2
+  plantPrice: 50
+  harvestPoints: 2
+  stageTime: 7
+  shopIcon: {fileID: 1648571265, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  seedBagIcon: {fileID: -490166711, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  cropSignSmall: {fileID: 1403283149, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  cropsignLarge: {fileID: -2103163379, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  growthSprites:
+  - {fileID: -915279017, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: 2077937653, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: 1641799817, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: 1236798919, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: 280655096, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: -212794228, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: 372649689, guid: 57f9770ac7ea8714cb0d3b7d6989bac2, type: 3}
