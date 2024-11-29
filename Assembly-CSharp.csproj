@@ -70,7 +70,9 @@
     <Compile Include="Assets\Resources\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Shops\ShopInfoPopUp.cs" />
     <Compile Include="Assets\Resources\Scripts\Shops\ShopItem.cs" />
+    <Compile Include="Assets\Resources\Scripts\PlotsAndPlants\PlotSlotManager.cs" />
     <Compile Include="Assets\Resources\Scripts\PlotsAndPlants\Plot.cs" />
+    <Compile Include="Assets\Resources\Scripts\PlotsAndPlants\PlotSlot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

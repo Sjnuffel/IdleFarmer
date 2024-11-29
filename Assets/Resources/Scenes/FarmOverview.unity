@@ -1950,17 +1950,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 15
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 64, y: 64}
+  m_CellSize: {x: 96, y: 96}
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 1
-  m_ConstraintCount: 5
+  m_ConstraintCount: 3
 --- !u!114 &1470104088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2273,6 +2273,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 75b75a90be94ebc4a9d8a2f26c3cedac, type: 2}
   - {fileID: 11400000, guid: 3bf1bc756df40f04c9dd07dad6d2c3e0, type: 2}
   - {fileID: 11400000, guid: 8e152d3f119a30e4abff4057300e6f4f, type: 2}
+  - {fileID: 11400000, guid: 55af79862a2a2ec47a4c97fef3a71da5, type: 2}
+  - {fileID: 11400000, guid: a1c4cf9dc674f7e489e9ce9bb4ff8a61, type: 2}
+  - {fileID: 11400000, guid: c0bb4ee5051bec640a44c53a677e250a, type: 2}
 --- !u!4 &1782332143
 Transform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Leek
   m_EditorClassIdentifier: 
   plantName: Leek
-  plantDescription: 
+  plantDescription: One must wonder how many unique things someone can say about
+    things that grow out of the ground. Not much, really. It'll be a leek.
+  plantHarvestDetails: '- Gain 4 gp'
   plantRank: 4
   plantPrice: 75
   harvestPoints: 4

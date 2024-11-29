@@ -15,6 +15,7 @@ MonoBehaviour:
   plantName: Garlic
   plantDescription: You could say this is a step down from turnips, you know. Size
     wise. Are we gonna make it?
+  plantHarvestDetails: '- Gain 2 gp'
   plantRank: 2
   plantPrice: 50
   harvestPoints: 2

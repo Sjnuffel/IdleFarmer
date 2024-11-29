@@ -15,6 +15,7 @@ MonoBehaviour:
   plantName: Potato
   plantDescription: Just once I would like something different then a root vegetable.
     One can dream, can't he?
+  plantHarvestDetails: '- Gain 5 gp'
   plantRank: 2
   plantPrice: 350
   harvestPoints: 5

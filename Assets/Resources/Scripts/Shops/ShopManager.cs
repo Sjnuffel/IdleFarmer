@@ -36,11 +36,14 @@ public class ShopManager : MonoBehaviour
         // Loop through available plant types
         foreach (PlantType plant in availablePlantTypes)
         {
+            // Skip plants that are already unlocked
+            if (ResourceManager.instance.IsPlantUnlocked(plant))
+                continue;
+
             // Only show plants with a rank greater than the player's current rank
             if (plant.plantRank > ResourceManager.instance.currentFarmRank)
-            {
                 AddPlantShopButton(plant);
-            }
+            
         }
     }
 
@@ -54,10 +57,7 @@ public class ShopManager : MonoBehaviour
         TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
 
         if (buttonText != null)
-        {
-            buttonText.text = $"{plant.name}";
             image.sprite = plant.shopIcon;
-        }
 
         if (button.TryGetComponent<Button>(out var buttonComponent))
             buttonComponent.onClick.AddListener(() => BuyPlant(plant));
@@ -70,14 +70,16 @@ public class ShopManager : MonoBehaviour
         if (ResourceManager.instance.totalGrowthPoints >= plant.plantPrice)
         {
             ResourceManager.instance.totalGrowthPoints -= plant.plantPrice;
+            ResourceManager.instance.UnlockPlant(plant);
             ResourceManager.instance.UpdateUI();
-            Debug.Log($"Purchased {plant.name}!");
 
-            // ResourceManager.instance.UnlockPlant(plant);
+            PopulateShopGrid();
+
+            Debug.Log($"Purchased {plant.name}!");
         } 
         else
         {
-            Debug.Log($"Not enough GP");
+            Debug.Log($"Not enough GP to buy {plant.plantName}");
         }
     }
 }

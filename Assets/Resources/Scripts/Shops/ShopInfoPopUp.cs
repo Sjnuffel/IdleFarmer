@@ -22,6 +22,8 @@ public class ShopInfoPopUp : MonoBehaviour
             return;
         }
 
+        Hide();
+
         CanvasGroup canvasGroup = popUpBackgroundPanel.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
         {

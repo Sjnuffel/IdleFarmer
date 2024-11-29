@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 /* <ResourceManager>
  * Primary Responsibility: Manages player-facing resources.
@@ -18,6 +19,8 @@ public class ResourceManager : MonoBehaviour
     public int totalGrowthPoints = 0;
     public int currentFarmRank = 0;
 
+    public List<PlantType> unlockedPlants; 
+
     public void Awake()
     {
         if (instance == null)
@@ -28,6 +31,8 @@ public class ResourceManager : MonoBehaviour
             Debug.LogWarning("Multiple ResourceManager instances detected destroying extra instance");
             Destroy(gameObject);
         }
+
+        unlockedPlants = new List<PlantType>();
     }
 
     public void AddGrowthPoints(int points)
@@ -49,5 +54,19 @@ public class ResourceManager : MonoBehaviour
 
         if (farmRankText != null)
             farmRankText.text = $"Rank: {currentFarmRank}"; 
+    }
+
+    public void UnlockPlant(PlantType plant)
+    {
+        if (!unlockedPlants.Contains(plant))
+        {
+            unlockedPlants.Add(plant);
+            Debug.Log($"{plant.plantName} has been unlocked!");
+        }
+    }
+
+    public bool IsPlantUnlocked(PlantType plant)
+    {
+        return unlockedPlants.Contains(plant);
     }
 }
