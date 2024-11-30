@@ -19,7 +19,9 @@ public class ResourceManager : MonoBehaviour
     public int totalGrowthPoints = 0;
     public int currentFarmRank = 0;
 
-    public List<PlantType> unlockedPlants; 
+    public List<PlantType> unlockedPlantTypes; 
+    public List<FertilizerType> unlockedFertilizerTypes;
+    public List<ToolType> unlockedToolTypes;
 
     public void Awake()
     {
@@ -32,7 +34,9 @@ public class ResourceManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        unlockedPlants = new List<PlantType>();
+        unlockedPlantTypes = new List<PlantType>();
+        unlockedFertilizerTypes = new List<FertilizerType>();
+        unlockedToolTypes = new List<ToolType>();
     }
 
     public void AddGrowthPoints(int points)
@@ -56,17 +60,17 @@ public class ResourceManager : MonoBehaviour
             farmRankText.text = $"Rank: {currentFarmRank}"; 
     }
 
-    public void UnlockPlant(PlantType plant)
+    public void UnlockItem(List<Item> list, Item item)
     {
-        if (!unlockedPlants.Contains(plant))
+        if (!list.Contains(item))
         {
-            unlockedPlants.Add(plant);
-            Debug.Log($"{plant.plantName} has been unlocked!");
+            list.Add(item);
+            Debug.Log($"{item.itemName} has been unlocked!");
         }
     }
 
-    public bool IsPlantUnlocked(PlantType plant)
+    public bool IsItemUnlocked(List<Item> list, Item item)
     {
-        return unlockedPlants.Contains(plant);
+        return list.Contains(item);
     }
 }

@@ -53,14 +53,14 @@ public class Plant : MonoBehaviour
     {
         if (currentStage == GrowthStage.Mature)
         {
-            Debug.Log($"Harvested {plantType.plantName}, earned {plantType.harvestPoints} growth points!");
-            ResourceManager.instance.AddGrowthPoints(plantType.harvestPoints);
+            Debug.Log($"Harvested {plantType.itemName}, earned {plantType.rewardPoints} growth points!");
+            ResourceManager.instance.AddGrowthPoints(plantType.rewardPoints);
 
             ResetPlant();
         } 
         else if ( currentStage == GrowthStage.Withered)
         {
-            Debug.Log($"{plantType.plantName} has unfortunately withered.");
+            Debug.Log($"{plantType.itemName} has unfortunately withered.");
 
             ResetPlant();
         } 

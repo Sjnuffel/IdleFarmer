@@ -42,10 +42,10 @@ public class PlotSlotManager : MonoBehaviour
         }
 
         // Populate with unlocked seeds
-        foreach (PlantType unlockedSeed in ResourceManager.instance.unlockedPlants)
+        foreach (PlantType unlockedSeed in ResourceManager.instance.unlockedPlantTypes)
         {
             GameObject seedButton = Instantiate(seedButtonPrefab, seedSelectionGrid);
-            seedButton.GetComponentInChildren<Image>().sprite = unlockedSeed.shopIcon;
+            seedButton.GetComponentInChildren<Image>().sprite = unlockedSeed.itemShopIcon;
 
             // Add listener for planting the seed
             Button button = seedButton.GetComponentInChildren<Button>();  

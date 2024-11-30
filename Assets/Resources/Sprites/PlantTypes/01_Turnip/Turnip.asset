@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82dc9d3ca3b7c6944aa24415738f364c, type: 3}
   m_Name: Turnip
   m_EditorClassIdentifier: 
-  plantName: Turnips
-  plantDescription: When you have nothing, Turnips will have your back.
-  plantHarvestDetails: '- Gain 1 gp'
-  plantRank: 1
-  plantPrice: 0
-  harvestPoints: 1
+  itemName: Turnip
+  itemDescription: Juicy turnips, gotta start somewhere eh?
+  itemDetails: '- Gain 1 gp'
+  itemCost: 0
+  itemShopIcon: {fileID: 66262881, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  rank: 1
+  rewardPoints: 1
   stageTime: 5
-  shopIcon: {fileID: 266740742, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   seedBagIcon: {fileID: 66262881, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropSignSmall: {fileID: -246331132, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropsignLarge: {fileID: 1056233181, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb22dfadd9192c241ba1c1d324c824e5, type: 3}
+  m_Name: EchoGrade
+  m_EditorClassIdentifier: 
+  itemName: Echo Grade
+  itemDescription: Barely there, but just enough to do the job
+  itemDetails: '- Increases GP gain by 10%'
+  itemCost: 1000000
+  itemShopIcon: {fileID: -1699589326, guid: 491f213b783927f4cb1a681ed6170a06, type: 3}
+  rank: 0
+  rewardPoints: 0

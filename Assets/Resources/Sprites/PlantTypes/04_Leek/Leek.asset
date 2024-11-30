@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82dc9d3ca3b7c6944aa24415738f364c, type: 3}
   m_Name: Leek
   m_EditorClassIdentifier: 
-  plantName: Leek
-  plantDescription: One must wonder how many unique things someone can say about
-    things that grow out of the ground. Not much, really. It'll be a leek.
-  plantHarvestDetails: '- Gain 4 gp'
-  plantRank: 4
-  plantPrice: 75
-  harvestPoints: 4
+  itemName: Leek
+  itemDescription: Oh look, this almost grows above ground. You're getting there!
+  itemDetails: '- Gain 4 gp.'
+  itemCost: 500
+  itemShopIcon: {fileID: -2127710004, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  rank: 4
+  rewardPoints: 4
   stageTime: 9
-  shopIcon: {fileID: -2127710004, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   seedBagIcon: {fileID: -1094599966, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropSignSmall: {fileID: -986572872, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropsignLarge: {fileID: -989890619, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}

@@ -23,8 +23,8 @@ public class PlotSlot : MonoBehaviour
     {
         // plant the seed
         currentPlant = seed;
-        plotImage.sprite = seed.shopIcon; // update the visual
+        plotImage.sprite = seed.itemShopIcon; // update the visual
 
-        Debug.Log($"Planted {seed.plantName} in this plot!");
+        Debug.Log($"Planted {seed.itemName} in this plot!");
     }
 }

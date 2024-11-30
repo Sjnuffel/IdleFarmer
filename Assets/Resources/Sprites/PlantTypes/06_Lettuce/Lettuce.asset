@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82dc9d3ca3b7c6944aa24415738f364c, type: 3}
   m_Name: Lettuce
   m_EditorClassIdentifier: 
-  plantName: Lettuce
-  plantDescription: 
-  plantRank: 4
-  plantPrice: 150
-  harvestPoints: 8
+  itemName: Lettuce
+  itemDescription: Oh my god, actual green above ground veggies. Amazing progress!
+  itemDetails: '- Gain 10 gp'
+  itemCost: 10000
+  itemShopIcon: {fileID: -739683927, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  rank: 6
+  rewardPoints: 10
   stageTime: 15
-  shopIcon: {fileID: -739683927, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   seedBagIcon: {fileID: -815403254, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropSignSmall: {fileID: -986572872, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropsignLarge: {fileID: -989890619, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}

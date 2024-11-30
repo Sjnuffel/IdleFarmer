@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82dc9d3ca3b7c6944aa24415738f364c, type: 3}
   m_Name: SweetPotato
   m_EditorClassIdentifier: 
-  plantName: Potato
-  plantDescription: Just once I would like something different then a root vegetable.
-    One can dream, can't he?
-  plantHarvestDetails: '- Gain 5 gp'
-  plantRank: 2
-  plantPrice: 350
-  harvestPoints: 5
-  stageTime: 10
-  shopIcon: {fileID: -1282046005, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  itemName: Sweet Potatoes
+  itemDescription: Aww nuts, I really thought we left the root vegetables behind...
+  itemDetails: '- Gain 5 gp'
+  itemCost: 5000
+  itemShopIcon: {fileID: -1282046005, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  rank: 5
+  rewardPoints: 5
+  stageTime: 15
   seedBagIcon: {fileID: 1470739439, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropSignSmall: {fileID: 2070646332, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropsignLarge: {fileID: -520050052, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82dc9d3ca3b7c6944aa24415738f364c, type: 3}
   m_Name: Garlic
   m_EditorClassIdentifier: 
-  plantName: Garlic
-  plantDescription: You could say this is a step down from turnips, you know. Size
-    wise. Are we gonna make it?
-  plantHarvestDetails: '- Gain 2 gp'
-  plantRank: 2
-  plantPrice: 50
-  harvestPoints: 2
+  itemName: Garlic
+  itemDescription: A step up from Turnips I'd say! You weren't dating anyone were
+    you?
+  itemDetails: '- Gain 2 gp'
+  itemCost: 50
+  itemShopIcon: {fileID: 1648571265, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  rank: 2
+  rewardPoints: 2
   stageTime: 7
-  shopIcon: {fileID: 1648571265, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   seedBagIcon: {fileID: -490166711, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropSignSmall: {fileID: 1403283149, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
   cropsignLarge: {fileID: -2103163379, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
