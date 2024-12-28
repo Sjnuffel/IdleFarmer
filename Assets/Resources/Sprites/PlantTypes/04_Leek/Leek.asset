@@ -16,17 +16,17 @@ MonoBehaviour:
   itemDescription: Oh look, this almost grows above ground. You're getting there!
   itemDetails: '- Gain 4 gp.'
   itemCost: 500
-  itemShopIcon: {fileID: -2127710004, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  itemShopIcon: {fileID: -707460688, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   rank: 4
   rewardPoints: 4
   stageTime: 9
-  seedBagIcon: {fileID: -1094599966, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropSignSmall: {fileID: -986572872, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropsignLarge: {fileID: -989890619, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  seedBagIcon: {fileID: 2004291023, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropSignSmall: {fileID: 1477962256, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropsignLarge: {fileID: -585476667, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   growthSprites:
-  - {fileID: 1555691177, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 942957897, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 60970363, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -4622735, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -1474758162, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -1680097196, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: -808929888, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 247472864, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 665646953, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 1379291294, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 998264392, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -680300081, guid: 9976187e507be7840934a6c4387c99e3, type: 3}

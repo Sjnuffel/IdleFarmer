@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82dc9d3ca3b7c6944aa24415738f364c, type: 3}
+  m_Name: Courgette
+  m_EditorClassIdentifier: 
+  itemName: Courgette
+  itemDescription: Known for all the memes
+  itemDetails: '- Gain 25 gp'
+  itemCost: 1000000
+  itemShopIcon: {fileID: -2081320246, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  rank: 7
+  rewardPoints: 25
+  stageTime: 25
+  seedBagIcon: {fileID: -776032428, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropSignSmall: {fileID: -439163212, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropsignLarge: {fileID: 650536228, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  growthSprites:
+  - {fileID: 749667568, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 1219358438, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -249344956, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 1741175284, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -289597035, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 1881946267, guid: 9976187e507be7840934a6c4387c99e3, type: 3}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40800a5a38d9d040b19c82b792a0a76, type: 3}
+  m_Name: HoeBasic
+  m_EditorClassIdentifier: 
+  itemName: Hoe
+  itemDescription: A basic hoe, allowing you to create one more plot
+  itemDetails: '- Gains 1 plot'
+  itemCost: 0
+  itemShopIcon: {fileID: 874970218, guid: 33a263f545e427e4885fa6f682bb84dd, type: 3}

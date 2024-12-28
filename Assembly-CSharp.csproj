@@ -69,6 +69,7 @@
     <Compile Include="Assets\Resources\Scripts\Shops\ShopUI\ShopInfoPopUp.cs" />
     <Compile Include="Assets\Resources\Scripts\Shops\ShopManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Shops\Shop.cs" />
+    <Compile Include="Assets\Resources\Scripts\Debug\DebugMenu.cs" />
     <Compile Include="Assets\Resources\Scripts\Items\Tools\Tool.cs" />
     <Compile Include="Assets\Resources\Scripts\Items\Tools\ToolType.cs" />
     <Compile Include="Assets\Resources\Scripts\Items\Item.cs" />

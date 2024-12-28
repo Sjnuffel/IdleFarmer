@@ -19,7 +19,9 @@ public class ShopManager : MonoBehaviour
 
     public List<PlantType> availableSeeds;
     public List<FertilizerType> availableFertilizers;
-    public List<PlantType> availableTools; // TO DO: Needs to be changed to "ToolType", but doesn't exist yet
+    public List<ToolType> availableTools; // TO DO: Needs to be changed to "ToolType", but doesn't exist yet
+
+    private bool debug = false;
 
     public void Start()
     {
@@ -54,17 +56,27 @@ public class ShopManager : MonoBehaviour
 
             // handle sub-class specific logic
             if (item is PlantType plant)
+            {
                 UnlockPlant(plant);
+                availableSeeds.Remove(plant);
+            }
+
 
             else if (item is FertilizerType fertilizer)
+            {
                 UnlockFertilizer(fertilizer);
+                availableFertilizers.Remove(fertilizer);
+            }
 
-            else if (item is ToolType tool)
+
+            else if (item is ToolType tool) 
+            {
                 UnlockTool(tool);
-
-            ResourceManager.instance.UpdateUI();
+                availableTools.Remove(tool);
+            }
 
             UpdateShopContent();
+            ResourceManager.instance.UpdateUI();
         } 
 
         else
@@ -99,6 +111,22 @@ public class ShopManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Allow other scripts to enable/disable the various tab buttons.
+    /// </summary>
+    /// <param name="state">Boolean to enable or disable interactability</param>
+    public void SetTabsInteractable(bool state)
+    {
+        foreach (Button tab in tabButtons)
+        {
+            var colors = tab.colors;
+            colors.normalColor = Color.grey;
+            tab.colors = colors;
+
+            tab.interactable = state;   
+        }
+    }
+
+    /// <summary>
     /// Returns the content of the selected category, to show specific buttons to buy specific things
     /// </summary>
     private void UpdateShopContent()
@@ -111,11 +139,13 @@ public class ShopManager : MonoBehaviour
                 shopTitle.text = "Seed Store";
                 break;
 
+            // to do: expand on fertilizer class, also has to unlock with rank
             case ShopCategory.Fertilizer:
                 PopulateGrid(availableFertilizers, categoryGrids[(int)ShopCategory.Fertilizer]);
                 shopTitle.text = "Fertilizer Depot";
                 break;
 
+            // to do: expand on tool class, does basically nothing yet
             case ShopCategory.Tools:
                 PopulateGrid(availableTools, categoryGrids[(int)ShopCategory.Tools]);
                 shopTitle.text = "Tool Store";
@@ -125,6 +155,12 @@ public class ShopManager : MonoBehaviour
 
     // Private SHOP functions (buying various items)
 
+    /// <summary>
+    /// Setup a shop's grid by providing the list of items and the grid to present it on. 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="items">Array of items such as plants, fertilizers or tools</param>
+    /// <param name="grid">Grid to present the items on, such as ShopSeedGrid, ShopFertilizerGrid</param>
     private void PopulateGrid<T>(List<T> items, GameObject grid)
     {
         foreach (Transform child in grid.transform)
@@ -152,19 +188,25 @@ public class ShopManager : MonoBehaviour
 
     private void UnlockPlant(PlantType plant)
     {
-        Debug.Log($"Plant unlocked: {plant.itemName}");
+        if (debug)
+            Debug.Log($"Plant unlocked: {plant.itemName}");
+
         ResourceManager.instance.unlockedPlantTypes.Add(plant);
     }
 
     private void UnlockFertilizer(FertilizerType fertilizer)
     {
-        Debug.Log($"Fertilizer unlocked: {fertilizer.itemName}");
+        if (debug)
+            Debug.Log($"Fertilizer unlocked: {fertilizer.itemName}");
+        
         ResourceManager.instance.unlockedFertilizerTypes.Add(fertilizer);
     }
 
     private void UnlockTool(ToolType tool)
     {
-        Debug.Log($"Tool unlocked: {tool.itemName}");
+        if (debug)
+            Debug.Log($"Tool unlocked: {tool.itemName}");
+            
         ResourceManager.instance.unlockedToolTypes.Add(tool);
     }
 }

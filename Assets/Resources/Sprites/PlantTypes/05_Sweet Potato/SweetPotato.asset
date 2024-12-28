@@ -16,17 +16,17 @@ MonoBehaviour:
   itemDescription: Aww nuts, I really thought we left the root vegetables behind...
   itemDetails: '- Gain 5 gp'
   itemCost: 5000
-  itemShopIcon: {fileID: -1282046005, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  itemShopIcon: {fileID: 232506274, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   rank: 5
   rewardPoints: 5
   stageTime: 15
-  seedBagIcon: {fileID: 1470739439, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropSignSmall: {fileID: 2070646332, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropsignLarge: {fileID: -520050052, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  seedBagIcon: {fileID: -2079382956, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropSignSmall: {fileID: -1568951111, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropsignLarge: {fileID: -797390498, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   growthSprites:
-  - {fileID: 1480162792, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -871803451, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 119582850, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -450661097, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -2136238922, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 1532625313, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: 1880477634, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -137662329, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 1319973413, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 1390808929, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 132101680, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -484033289, guid: 9976187e507be7840934a6c4387c99e3, type: 3}

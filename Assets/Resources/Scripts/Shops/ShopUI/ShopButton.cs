@@ -12,7 +12,7 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     private Item shopItem;
     private Shop shop;
 
-    private ShopInfoPopUp shopInfoPopUp;
+    private readonly bool debug = false;
 
     public void SetupButton(Item item, ShopManager manager)
     {
@@ -27,12 +27,12 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
         GetComponent<UnityEngine.UI.Image>().sprite = item.itemShopIcon;
 
-        Debug.Log($"Plant: {shopItemNameText}, Description: {shopItemDescriptionText}, Harvest: {shopItemDetailsText},  Price: {shopItemPriceText}");
+        // Debug.Log($"Plant: {shopItemNameText}, Description: {shopItemDescriptionText}, Harvest: {shopItemDetailsText},  Price: {shopItemPriceText}");
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log($"Pointer entered {shopItemNameText}");
+        // Debug.Log($"Pointer entered {shopItemNameText}");
 
         if (ShopInfoPopUp.Instance != null)
         {
@@ -49,7 +49,8 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log($"Pointer exited {shopItemNameText}");
+        if (debug)
+            Debug.Log($"Pointer exited {shopItemNameText}");
 
         if (ShopInfoPopUp.Instance != null)
             ShopInfoPopUp.Instance.Hide();

@@ -16,18 +16,18 @@ MonoBehaviour:
   itemDescription: Juicy turnips, gotta start somewhere eh?
   itemDetails: '- Gain 1 gp'
   itemCost: 0
-  itemShopIcon: {fileID: 66262881, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  itemShopIcon: {fileID: 1286352282, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
   rank: 1
   rewardPoints: 1
   stageTime: 5
-  seedBagIcon: {fileID: 66262881, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropSignSmall: {fileID: -246331132, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropsignLarge: {fileID: 1056233181, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  seedBagIcon: {fileID: -1002192114, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
+  cropSignSmall: {fileID: -342738778, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
+  cropsignLarge: {fileID: -1859384316, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
   growthSprites:
-  - {fileID: 1058035600, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -1119379623, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -1458686328, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -85454814, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -1006181512, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -694271430, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: -2049636607, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
+  - {fileID: -1098848585, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
+  - {fileID: -827313082, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
+  - {fileID: 1031306414, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
+  - {fileID: 2035182222, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
+  - {fileID: 846338858, guid: f00b308e71ce9294e9a72af5cae81e4a, type: 3}
   - {fileID: 372649689, guid: 57f9770ac7ea8714cb0d3b7d6989bac2, type: 3}

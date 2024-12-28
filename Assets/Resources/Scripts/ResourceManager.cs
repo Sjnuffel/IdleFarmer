@@ -23,6 +23,8 @@ public class ResourceManager : MonoBehaviour
     public List<FertilizerType> unlockedFertilizerTypes;
     public List<ToolType> unlockedToolTypes;
 
+    private bool debug = false;
+
     public void Awake()
     {
         if (instance == null)
@@ -34,7 +36,6 @@ public class ResourceManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        unlockedPlantTypes = new List<PlantType>();
         unlockedFertilizerTypes = new List<FertilizerType>();
         unlockedToolTypes = new List<ToolType>();
     }
@@ -65,7 +66,9 @@ public class ResourceManager : MonoBehaviour
         if (!list.Contains(item))
         {
             list.Add(item);
-            Debug.Log($"{item.itemName} has been unlocked!");
+
+            if (debug)
+                Debug.Log($"{item.itemName} has been unlocked!");
         }
     }
 

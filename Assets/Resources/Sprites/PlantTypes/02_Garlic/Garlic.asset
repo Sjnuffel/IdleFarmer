@@ -16,19 +16,19 @@ MonoBehaviour:
   itemDescription: A step up from Turnips I'd say! You weren't dating anyone were
     you?
   itemDetails: '- Gain 2 gp'
-  itemCost: 50
-  itemShopIcon: {fileID: 1648571265, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  itemCost: 1
+  itemShopIcon: {fileID: 1941028929, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   rank: 2
   rewardPoints: 2
   stageTime: 7
-  seedBagIcon: {fileID: -490166711, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropSignSmall: {fileID: 1403283149, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropsignLarge: {fileID: -2103163379, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  seedBagIcon: {fileID: -932699594, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropSignSmall: {fileID: -1506358481, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropsignLarge: {fileID: 287284003, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   growthSprites:
-  - {fileID: -915279017, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 2077937653, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 1641799817, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 1236798919, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 280655096, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -212794228, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: 233940229, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 652594081, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 382919279, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 908538847, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 620712695, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -1144257469, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   - {fileID: 372649689, guid: 57f9770ac7ea8714cb0d3b7d6989bac2, type: 3}

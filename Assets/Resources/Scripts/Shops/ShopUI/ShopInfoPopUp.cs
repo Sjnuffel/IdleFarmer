@@ -13,6 +13,8 @@ public class ShopInfoPopUp : MonoBehaviour
     public TextMeshProUGUI popUpHarvestDetails;
     public TextMeshProUGUI popUpPriceText;
 
+    private bool debug = false;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -68,7 +70,8 @@ public class ShopInfoPopUp : MonoBehaviour
         Vector3 offset = new(-150f, -150f, 0f); 
         Vector3 adjustedPosition = position + offset;
 
-        Debug.Log($"Offset: {offset} and position: {adjustedPosition}");
+        if (debug) 
+            Debug.Log($"Offset: {offset} and position: {adjustedPosition}");
 
         // Clamp position to screen bounds
         RectTransform canvasRect = popUpBackgroundPanel.GetComponentInParent<Canvas>().GetComponent<RectTransform>();

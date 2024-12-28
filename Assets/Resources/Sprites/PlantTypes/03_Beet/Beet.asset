@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82dc9d3ca3b7c6944aa24415738f364c, type: 3}
+  m_Name: Beet
+  m_EditorClassIdentifier: 
+  itemName: Beet
+  itemDescription: Starting to get some colourful root vegetables now!
+  itemDetails: '- Gain 3 gp.'
+  itemCost: 150
+  itemShopIcon: {fileID: -1896480535, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  rank: 3
+  rewardPoints: 3
+  stageTime: 8
+  seedBagIcon: {fileID: -115146247, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropSignSmall: {fileID: -1132557978, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropsignLarge: {fileID: 1618145867, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  growthSprites:
+  - {fileID: 1001031093, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -834339293, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -1095591358, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 342023817, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 82239255, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -1665184006, guid: 9976187e507be7840934a6c4387c99e3, type: 3}

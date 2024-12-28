@@ -13,6 +13,8 @@ public class Plant : MonoBehaviour
     private Image image; // while the sprite renderer can loop through, we have to set the image to see our sprite update
     private SpriteRenderer spriteRenderer;
 
+    private bool debug = false;
+
     public enum GrowthStage
     {
         Seed,
@@ -53,20 +55,41 @@ public class Plant : MonoBehaviour
     {
         if (currentStage == GrowthStage.Mature)
         {
-            Debug.Log($"Harvested {plantType.itemName}, earned {plantType.rewardPoints} growth points!");
-            ResourceManager.instance.AddGrowthPoints(plantType.rewardPoints);
+            if (debug) 
+                Debug.Log($"Harvested {plantType.itemName}, earned {plantType.rewardPoints} growth points!");
 
+            ResourceManager.instance.AddGrowthPoints(plantType.rewardPoints);
             ResetPlant();
         } 
+
         else if ( currentStage == GrowthStage.Withered)
         {
-            Debug.Log($"{plantType.itemName} has unfortunately withered.");
+            if (debug)
+                Debug.Log($"{plantType.itemName} has unfortunately withered.");
 
             ResetPlant();
         } 
+
         else
         {
             Debug.Log($"Plant is not ready for harvest yet.");
+        }
+    }
+
+    public void SetPlantType(PlantType newPlantType)
+    {
+        plantType = newPlantType;
+        growthSprites = plantType.growthSprites;
+        currentStage = GrowthStage.Seed;
+
+        if (plantType.growthSprites.Length > 0)
+        {
+            spriteRenderer.sprite = plantType.growthSprites[0];
+            UpdateVisuals();
+        }
+        else
+        {
+            Debug.LogError($"No growth sprites defined for {newPlantType.itemName}");
         }
     }
 
@@ -92,7 +115,8 @@ public class Plant : MonoBehaviour
             spriteRenderer.sprite = growthSprites[(int)currentStage];
             image.sprite = spriteRenderer.sprite;
 
-            Debug.Log($"Sprite updated to: {growthSprites[(int)currentStage].name}");
+            if (debug) 
+                Debug.Log($"Sprite updated to: {growthSprites[(int)currentStage].name}");
 
         } else
         {

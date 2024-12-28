@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlotManager : MonoBehaviour
 {
+    // Manages the position of each plot in the plotGrid.
 
     public GameObject plotPrefab; // assign the plot prefab in the inspector
 
@@ -9,6 +10,8 @@ public class PlotManager : MonoBehaviour
     public int columns = 15;
     public float xOffSet = 64f;
     public float yOffSet = 32f;
+
+    private bool debug = false;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +44,8 @@ public class PlotManager : MonoBehaviour
                 if (plot != null)
                     plotScript.plotID = plotIDCounter;
 
-                // Debug.Log($"Plot {plotIDCounter} at Position: {position}");
+                if (debug)
+                    Debug.Log($"Plot {plotIDCounter} at Position: {position}");
 
                 plotIDCounter++;
             }

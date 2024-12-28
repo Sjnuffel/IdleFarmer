@@ -293,7 +293,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -79.1, y: 75.6}
-  m_SizeDelta: {x: 64, y: 64}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2506115914150016777
 CanvasRenderer:
@@ -361,5 +361,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plotSlotButton: {fileID: 3229715397005459429}
-  plotImage: {fileID: 0}
   currentPlant: {fileID: 0}

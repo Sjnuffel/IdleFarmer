@@ -7,6 +7,8 @@ public class Plot : MonoBehaviour
     public bool isOccupied = false;
     public int plotID;
 
+    private bool debug = false;
+
     public void PlantSeed()
     {
 
@@ -22,13 +24,17 @@ public class Plot : MonoBehaviour
             // Register the plant in the GameManager
             if (newPlant.TryGetComponent<Plant>(out var plantScript))
             {
-                Debug.Log($"Plant script: {plantScript}");
+                if (debug)
+                    Debug.Log($"Plant script: {plantScript}");
+                
                 GameManager.instance.RegisterPlant(plantScript);
             }
 
             // Generate an ID for the plot
             GameManager.instance.AssignPlantToPlot(plotID, newPlant);
-            Debug.Log($"Seed planted in plot {plotID}!");
+            
+            if (debug)
+                Debug.Log($"Seed planted in plot {plotID}!");
         }
         else
         {
@@ -38,7 +44,8 @@ public class Plot : MonoBehaviour
             if (existingPlant != null && existingPlant.TryGetComponent<Plant>(out var plantScript))
             {
                 plantScript.HarvestPlant();
-                Debug.Log($"Harvested plant in plot {plotID}");
+                if (debug)
+                    Debug.Log($"Harvested plant in plot {plotID}");
             }
             else
             {

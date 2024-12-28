@@ -16,17 +16,17 @@ MonoBehaviour:
   itemDescription: Oh my god, actual green above ground veggies. Amazing progress!
   itemDetails: '- Gain 10 gp'
   itemCost: 10000
-  itemShopIcon: {fileID: -739683927, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  itemShopIcon: {fileID: -954790834, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   rank: 6
   rewardPoints: 10
   stageTime: 15
-  seedBagIcon: {fileID: -815403254, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropSignSmall: {fileID: -986572872, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  cropsignLarge: {fileID: -989890619, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  seedBagIcon: {fileID: 1320715595, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropSignSmall: {fileID: -1472743199, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  cropsignLarge: {fileID: -125216593, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   growthSprites:
-  - {fileID: -299716566, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: -916500681, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 1268265344, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 1909114229, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 1244117256, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
-  - {fileID: 1558944991, guid: 1a5e08c15f6722a4f8d9bbed95be82e6, type: 3}
+  - {fileID: -1192528646, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -1879509530, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -748656101, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -1893989042, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 1900469135, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: -1951121561, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
