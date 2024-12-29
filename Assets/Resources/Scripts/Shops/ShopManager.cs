@@ -33,8 +33,10 @@ public class ShopManager : MonoBehaviour
     {
         if (shopPanel != null)
         {
+            SetTabsInteractable(true);
             shopPanel.SetActive(!shopPanel.activeSelf);
 
+            // only populate the grid when it's actually active
             if (shopPanel.activeSelf)
                 PopulateGrid(availableSeeds, categoryGrids[(int)currentCategory]);
         }
@@ -118,11 +120,8 @@ public class ShopManager : MonoBehaviour
     {
         foreach (Button tab in tabButtons)
         {
-            var colors = tab.colors;
-            colors.normalColor = Color.grey;
-            tab.colors = colors;
-
-            tab.interactable = state;   
+            tab.gameObject.SetActive(state);
+            tab.interactable = state;
         }
     }
 
@@ -131,6 +130,7 @@ public class ShopManager : MonoBehaviour
     /// </summary>
     private void UpdateShopContent()
     {
+
         switch (currentCategory)
         {
             case ShopCategory.Seeds:

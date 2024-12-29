@@ -4,6 +4,9 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public enum MenuCategory { None, Graphics, Sound, Language };
+    public MenuCategory currentCategory = MenuCategory.None;
+
     public GameObject optionsPanel;
     public GameObject graphicsPanel;
     public GameObject soundPanel;
@@ -46,7 +49,16 @@ public class MainMenuManager : MonoBehaviour
     {
         if (graphicsPanel != null)
         {
-            graphicsPanel.SetActive(!graphicsPanel.activeSelf);
+            if (currentCategory != MenuCategory.Graphics)
+            {
+                SwitchMenuPanel(currentCategory);
+                graphicsPanel.SetActive(true);
+                currentCategory = MenuCategory.Graphics;
+            }
+        } 
+        else
+        {
+            Debug.LogError("MainMenuManager.Graphics() - No Graphics Panel component configured or found");
         }
     }
 
@@ -56,16 +68,27 @@ public class MainMenuManager : MonoBehaviour
     public void Sound()
     {
         if (soundPanel != null) 
-        { 
-            soundPanel.SetActive(!soundPanel.activeSelf);
+        {
+            if (currentCategory != MenuCategory.Sound) 
+            {
+                SwitchMenuPanel(currentCategory);
+                soundPanel.SetActive(true);
+                currentCategory = MenuCategory.Sound;
+            }
+            
         }
     }
 
+    /// <summary>
+    /// Open the language menu and the related tab containing all settings
+    /// </summary>
     public void Language()
     {
         if (languagePanel != null)
         {
-            languagePanel.SetActive(!languagePanel.activeSelf);
+            SwitchMenuPanel(currentCategory);
+            languagePanel.SetActive(true);
+            currentCategory = MenuCategory.Language;
         }
     }
 
@@ -94,5 +117,24 @@ public class MainMenuManager : MonoBehaviour
         {
             Debug.LogError("Failed to load FarmOverview");
         }
+    }
+
+    private void SwitchMenuPanel(MenuCategory category)
+    {
+        switch (category)
+        {
+            case MenuCategory.Graphics:
+                graphicsPanel.SetActive(false);
+                break;
+            case MenuCategory.Sound:
+                soundPanel.SetActive(false);
+                break;
+            case MenuCategory.Language:
+                languagePanel.SetActive(false); 
+                break;
+            default:
+                break;
+        }
+            
     }
 }

@@ -17,7 +17,7 @@ public class PlotSlotManager : MonoBehaviour
     public TextMeshProUGUI panelTitle;          // Title for the panel
     public ShopManager shopManager;
 
-    private PlotSlot selectedPlot;              // track the plot currently being planted
+    private PlotSlot selectedSlot;              // track the plot currently being planted
     
     private bool debug = true;
 
@@ -32,17 +32,21 @@ public class PlotSlotManager : MonoBehaviour
     public void OpenSeedSelection(PlotSlot plot)
     {
         // Track the selected Plot Slot
-        selectedPlot = plot;
+        selectedSlot = plot;
 
         if (debug)
-            Debug.Log($"Selected plot: {selectedPlot.name}");
+            Debug.Log($"Selected plot: {selectedSlot.name}");
+
+        // if it's not active, active the panel
+        if (!seedSelectionPanel.activeSelf)
+            seedSelectionPanel.SetActive(true);
+
+        // hide the tabs
+        shopManager.SetTabsInteractable(false);
 
         // Populate the Seed Selection panel
         PopulateSeedSelection();
 
-        // Show the panel
-        seedSelectionPanel.SetActive(true);
-        shopManager.SetTabsInteractable(false);
     }
 
     private void PopulateSeedSelection()
@@ -70,15 +74,17 @@ public class PlotSlotManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plant a seed/plant in the slot
+    /// </summary>
+    /// <param name="seed"></param>
     private void PlantSeed(PlantType seed)
     {
-        if (selectedPlot != null)
-        {
-            // plant the seed in selected plot
-            selectedPlot.PlantSeed(seed);
-        }
 
-        // deactive the seed selection panell
-        seedSelectionPanel.SetActive(false);
+        if (selectedSlot != null)
+        {
+            selectedSlot.PlantSeed(seed);
+            seedSelectionPanel.SetActive(false);
+        }
     }
 }
