@@ -40,18 +40,31 @@ public class ResourceManager : MonoBehaviour
         unlockedToolTypes = new List<ToolType>();
     }
 
+    /// <summary>
+    /// Add/update the growth points variable
+    /// </summary>
+    /// <param name="points"></param>
     public void AddGrowthPoints(int points)
     {
         totalGrowthPoints += points;
-        Debug.Log($"Growthpoints updated: {totalGrowthPoints}");
+        
+        if (debug)
+            Debug.Log($"Growthpoints updated: {totalGrowthPoints}");
+        
         UpdateUI();
     }
 
+    /// <summary>
+    /// Increase the current farm rank by 1
+    /// </summary>
     public void IncreaseFarmRank()
     {
         currentFarmRank++;
     }
 
+    /// <summary>
+    /// Redraw the UI values
+    /// </summary>
     public void UpdateUI()
     {
         if (growthPointsText != null)
@@ -61,6 +74,11 @@ public class ResourceManager : MonoBehaviour
             farmRankText.text = $"Rank: {currentFarmRank}"; 
     }
 
+    /// <summary>
+    /// Unlock an item in one of the various purchase lists
+    /// </summary>
+    /// <param name="list">The list you are unlocking the item from (seeds, fertilizers, tools)</param>
+    /// <param name="item">The item being unlocked</param>
     public void UnlockItem(List<Item> list, Item item)
     {
         if (!list.Contains(item))
@@ -72,6 +90,12 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Check if the item is already available
+    /// </summary>
+    /// <param name="list">The list the item is on</param>
+    /// <param name="item">The item on the list</param>
+    /// <returns></returns>
     public bool IsItemUnlocked(List<Item> list, Item item)
     {
         return list.Contains(item);

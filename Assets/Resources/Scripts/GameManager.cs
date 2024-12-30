@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private Dictionary<int, GameObject> plantedPlants = new Dictionary<int, GameObject>();
     private List<Plant> plants = new();
 
+    private bool debug = false;
+
 
     void Awake()
     {
@@ -36,29 +38,51 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Add a plant to the plot
+    /// </summary>
+    /// <param name="plant">The plant we are planting in the plot</param>
     public void RegisterPlant(Plant plant)
     {
         if (!plants.Contains(plant))
         {
             plants.Add(plant);
-            Debug.Log($"Plant registered: {plant.name}");
+            
+            if (debug)
+                Debug.Log($"Plant registered: {plant.name}");
         }
     }
 
+    /// <summary>
+    /// Remove a plant from the plot
+    /// </summary>
+    /// <param name="plant">The plant we are removing from the plot</param>
     public void UnregisterPlant(Plant plant)
     {
         if (plants.Contains(plant))
         {
             plants.Remove(plant);
+
+            if (debug)
+                Debug.Log($"Plant unregistered: {plant.name}");
         }
     }
 
-    // assign a plant and an ID into the plantedPlants Dictionary
+    /// <summary>
+    /// Assign a plant and an ID into the plantedPlants Dictionary
+    /// </summary>
+    /// <param name="plotID">ID of the plot the plant is assigned to</param>
+    /// <param name="plant">The plant object being planted</param>
     public void AssignPlantToPlot(int plotID, GameObject plant)
     {
         plantedPlants[plotID] = plant;
     }
 
+    /// <summary>
+    /// Get the plant in the current plot, found by plot ID.
+    /// </summary>
+    /// <param name="plotID">The plot ID</param>
+    /// <returns></returns>
     public GameObject GetPlantInPlot(int plotID)
     {
         return plantedPlants.ContainsKey(plotID) ? plantedPlants[plotID] : null;
