@@ -107,6 +107,12 @@ public class MainMenuManager : MonoBehaviour
 #endif
     }
 
+    // private functions
+
+    /// <summary>
+    /// Load the scene via addressables, this way we can fudge in a loading screen when it starts to add up
+    /// </summary>
+    /// <param name="obj">The scene being loaded</param>
     private void OnSceneLoaded(AsyncOperationHandle<UnityEngine.ResourceManagement.ResourceProviders.SceneInstance> obj)
     {
         if (obj.Status == AsyncOperationStatus.Succeeded)
@@ -119,6 +125,10 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method to switch between the various options submenu's
+    /// </summary>
+    /// <param name="category"></param>
     private void SwitchMenuPanel(MenuCategory category)
     {
         switch (category)

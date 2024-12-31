@@ -66,6 +66,7 @@
     <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Plots\PlotManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Plots\PlotSlot.cs" />
+    <Compile Include="Assets\Resources\Scripts\UIManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Shops\ShopUI\ShopInfoPopUp.cs" />
     <Compile Include="Assets\Resources\Scripts\Shops\ShopManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Shops\Shop.cs" />

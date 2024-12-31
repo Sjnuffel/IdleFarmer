@@ -8,15 +8,18 @@ public class ShopManager : MonoBehaviour
     public enum ShopCategory { Seeds, Fertilizer, Tools };
     public ShopCategory currentCategory = ShopCategory.Seeds;
 
+    [Header("Array Elements")]
     public GameObject[] categoryGrids; // array containing the various Shop Grids
     public Button[] tabButtons; // buttons for selecting categories
 
+    [Header("UI Panel Elements")]
     public GameObject shopPanel;
     public GameObject shopGridPanel;
     public GameObject shopButtonPrefab;
 
     public TextMeshProUGUI shopTitle;
 
+    [Header("List Elements")]
     public List<PlantType> availableSeeds;
     public List<FertilizerType> availableFertilizers;
     public List<ToolType> availableTools; // TO DO: Needs to be changed to "ToolType", but doesn't exist yet
