@@ -20,6 +20,7 @@ MonoBehaviour:
   rank: 5
   rewardPoints: 5
   stageTime: 15
+  witherTime: 15
   seedBagIcon: {fileID: -2079382956, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   cropSignSmall: {fileID: -1568951111, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   cropsignLarge: {fileID: -797390498, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
@@ -30,3 +31,4 @@ MonoBehaviour:
   - {fileID: 1390808929, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   - {fileID: 132101680, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
   - {fileID: -484033289, guid: 9976187e507be7840934a6c4387c99e3, type: 3}
+  - {fileID: 372649689, guid: 57f9770ac7ea8714cb0d3b7d6989bac2, type: 3}

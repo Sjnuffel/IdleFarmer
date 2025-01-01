@@ -7,7 +7,9 @@ public class Plant : MonoBehaviour
     public PlantType plantType;
 
     private float stageTime;
+    private float witherTime;
     private float growthTimer = 0f;
+    private float witherTimer = 0f;
 
     private Sprite[] growthSprites; // Array of sprites containing stages
     private Image image; // while the sprite renderer can loop through, we have to set the image to see our sprite update
@@ -26,12 +28,12 @@ public class Plant : MonoBehaviour
         Withered
     }
 
-    // Start is called before the first frame update
     void Start()
     {
 
         growthSprites = plantType.growthSprites;
         stageTime = plantType.stageTime;
+        witherTime = plantType.witherTime;
 
         if (!TryGetComponent<SpriteRenderer>(out spriteRenderer))
             Debug.Log("SpriteRenderer component not found on this object!");
@@ -43,14 +45,34 @@ public class Plant : MonoBehaviour
         UpdateVisuals();
     }
 
+    /// <summary>
+    /// Increase the growthtimer, so we know when to switch the stages. Keep separate track of the wither time as well.
+    /// This way it stays a bit more stable instead of the same time (so if it's short you have to click/harvest very fast).
+    /// </summary>
+    /// <param name="deltaTime"></param>
     public void AdvanceGrowthExternally(float deltaTime)
     {
         growthTimer += deltaTime;
 
-        if (growthTimer >= stageTime)
+        if (growthTimer >= stageTime && currentStage != GrowthStage.Mature)
+        {
             AdvanceGrowth();
+        } 
+        
+        else if (currentStage == GrowthStage.Mature)
+        {
+            witherTimer += deltaTime;
+
+            if (witherTimer >= witherTime)
+                AdvanceGrowth();
+        }
+
     }
 
+    /// <summary>
+    /// Method for harvesting the plant, when it's mature. If it's withered it's just reset.
+    /// Else we just print a debug statement for now.
+    /// </summary>
     public void HarvestPlant()
     {
         if (currentStage == GrowthStage.Mature)
@@ -76,6 +98,10 @@ public class Plant : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method to change to a new plant type so the correct sprints will be rendered.
+    /// </summary>
+    /// <param name="newPlantType">PlantType Scriptable Object</param>
     public void SetPlantType(PlantType newPlantType)
     {
         plantType = newPlantType;

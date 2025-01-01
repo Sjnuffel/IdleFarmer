@@ -22,12 +22,9 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         if (instance == null) 
-        {
             instance = this;
-        } else
-        {
+        else
             Destroy(gameObject);
-        }
     }
 
     private void Update()

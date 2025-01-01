@@ -4,6 +4,7 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
 
+    [Header("Item Properties")]
     public string itemName;                 // Name of the item
     public string itemDescription;          // Description of the item
     public string itemDetails;              // Additional information about the item

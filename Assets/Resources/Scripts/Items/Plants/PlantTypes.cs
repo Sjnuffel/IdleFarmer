@@ -8,11 +8,13 @@ public class PlantType : Item
      * 2. Whatever else comes to mind...
      */
 
-
+    [Header("Plant Specific Properties")]
     public int rank;                        // Rank of the plant (used to sort with for exampe)
     public int rewardPoints;                // Point reward of the plant;
     public float stageTime;                 // Time (in seconds) required per growth stage
+    public float witherTime = 15f;          // Withering time for the plant
 
+    [Header("Sprite Properties")]
     public Sprite seedBagIcon;              // Icon of the seed bag
     public Sprite cropSignSmall;            // Small crop sign
     public Sprite cropsignLarge;            // Large crope sign
