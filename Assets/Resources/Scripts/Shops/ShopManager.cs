@@ -192,7 +192,7 @@ public class ShopManager : MonoBehaviour
     private void UnlockPlant(PlantType plant)
     {
         if (debug)
-            Debug.Log($"Plant unlocked: {plant.itemName}");
+            Debug.Log($"ShopManager.UnlockPlant - Plant unlocked: {plant.itemName}");
 
         ResourceManager.instance.unlockedPlantTypes.Add(plant);
     }
@@ -200,7 +200,7 @@ public class ShopManager : MonoBehaviour
     private void UnlockFertilizer(FertilizerType fertilizer)
     {
         if (debug)
-            Debug.Log($"Fertilizer unlocked: {fertilizer.itemName}");
+            Debug.Log($"ShopManager.UnlockFertilizer - Fertilizer unlocked: {fertilizer.itemName}");
         
         ResourceManager.instance.unlockedFertilizerTypes.Add(fertilizer);
     }
@@ -208,8 +208,18 @@ public class ShopManager : MonoBehaviour
     private void UnlockTool(ToolType tool)
     {
         if (debug)
-            Debug.Log($"Tool unlocked: {tool.itemName}");
+            Debug.Log($"ShopManager.UnlockTool - Tool unlocked: {tool.itemName}");
             
         ResourceManager.instance.unlockedToolTypes.Add(tool);
+    }
+
+    private void UnlockPlot()
+    {
+        Debug.Log("ShopManager.UnlockPlot - Not Implemented Yet");
+    }
+
+    private void UnlockGrid()
+    {
+        Debug.Log("ShopManager.UnlockGrid - Not Implemented yet");
     }
 }

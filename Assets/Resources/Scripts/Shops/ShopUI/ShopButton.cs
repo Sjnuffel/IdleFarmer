@@ -27,12 +27,14 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
         GetComponent<UnityEngine.UI.Image>().sprite = item.itemShopIcon;
 
-        // Debug.Log($"Plant: {shopItemNameText}, Description: {shopItemDescriptionText}, Harvest: {shopItemDetailsText},  Price: {shopItemPriceText}");
+        if (debug)
+            Debug.Log($"Plant: {shopItemNameText}, Description: {shopItemDescriptionText}, Harvest: {shopItemDetailsText},  Price: {shopItemPriceText}");
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Debug.Log($"Pointer entered {shopItemNameText}");
+        if (debug)
+            Debug.Log($"Pointer entered {shopItemNameText}");
 
         if (ShopInfoPopUp.Instance != null)
         {
