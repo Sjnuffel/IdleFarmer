@@ -2038,10 +2038,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plots: []
-  seedSelectionPanel: {fileID: 368539764}
-  seedButtonPrefab: {fileID: 2397962471773537392, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
+  shopInterfacePanel: {fileID: 368539764}
+  shopButtonPrefab: {fileID: 5812497393865207200, guid: 2825860ab73947a479c62d0a727db9be, type: 3}
   currentPlant: {fileID: 0}
-  seedSelectionGrid: {fileID: 1470104086}
+  shopButtonGrid: {fileID: 1470104086}
   panelTitle: {fileID: 431914789}
   shopManager: {fileID: 1782332142}
 --- !u!4 &441777698
@@ -7654,11 +7654,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5204458503412229759, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5204458503412229759, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 32
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204458503412229759, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204458503412229759, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204458503412229759, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204458503412229759, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204458503412229759, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204458503412229759, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204458503412229759, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5516715253595639547, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
       propertyPath: m_PreserveAspect
@@ -7769,7 +7797,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 206403873548498508, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ec52359e23e52448e7c3a607fbe0df, type: 3}
@@ -7877,6 +7906,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlotSlotTwo
       objectReference: {fileID: 0}
+    - target: {fileID: 8835553429920515706, guid: 23d9a05abf257bc4b87bceff3dbed2e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835553429920515706, guid: 23d9a05abf257bc4b87bceff3dbed2e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835553429920515706, guid: 23d9a05abf257bc4b87bceff3dbed2e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835553429920515706, guid: 23d9a05abf257bc4b87bceff3dbed2e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835553429920515706, guid: 23d9a05abf257bc4b87bceff3dbed2e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9113393035690541473, guid: 23d9a05abf257bc4b87bceff3dbed2e3, type: 3}
       propertyPath: m_Color.b
       value: 0.101960786
@@ -7890,7 +7939,8 @@ PrefabInstance:
       value: 0.03529412
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6822277510821581970, guid: 23d9a05abf257bc4b87bceff3dbed2e3, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23d9a05abf257bc4b87bceff3dbed2e3, type: 3}
@@ -8006,12 +8056,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4984274092123701489, guid: 3e4016c7a66a7da4ea9151787145e109, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984274092123701489, guid: 3e4016c7a66a7da4ea9151787145e109, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984274092123701489, guid: 3e4016c7a66a7da4ea9151787145e109, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984274092123701489, guid: 3e4016c7a66a7da4ea9151787145e109, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984274092123701489, guid: 3e4016c7a66a7da4ea9151787145e109, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129392730161072215, guid: 3e4016c7a66a7da4ea9151787145e109, type: 3}
       propertyPath: m_Name
       value: PlotSlotThree
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1459553599804709428, guid: 3e4016c7a66a7da4ea9151787145e109, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4016c7a66a7da4ea9151787145e109, type: 3}

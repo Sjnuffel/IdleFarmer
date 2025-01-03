@@ -32,6 +32,9 @@ public class ShopManager : MonoBehaviour
         SelectCategory((int)ShopCategory.Seeds);
     }
 
+    /// <summary>
+    /// Enable/Disable the Shop UI Panel to purchase upgrades/items
+    /// </summary>
     public void ToggleShop()
     {
         if (shopPanel != null)
@@ -55,11 +58,8 @@ public class ShopManager : MonoBehaviour
         if (ResourceManager.instance.totalGrowthPoints >= item.itemCost)
         {
             ResourceManager.instance.totalGrowthPoints -= item.itemCost;
-
-            // call the item's onPurchase method
             item.OnPurchase();
 
-            // handle sub-class specific logic
             if (item is PlantType plant)
             {
                 UnlockPlant(plant);
@@ -189,14 +189,23 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Unlock a plant so it can be used by the player
+    /// </summary>
+    /// <param name="plant">The plant object</param>
     private void UnlockPlant(PlantType plant)
     {
         if (debug)
             Debug.Log($"ShopManager.UnlockPlant - Plant unlocked: {plant.itemName}");
 
-        ResourceManager.instance.unlockedPlantTypes.Add(plant);
+        if (!ResourceManager.instance.IsPlantUnlocked(plant))
+            ResourceManager.instance.unlockedPlantTypes.Add(plant);
     }
 
+    /// <summary>
+    /// Unlock a fertilizer type so it can be used by the player
+    /// </summary>
+    /// <param name="fertilizer">The fertilizer object</param>
     private void UnlockFertilizer(FertilizerType fertilizer)
     {
         if (debug)
@@ -205,6 +214,10 @@ public class ShopManager : MonoBehaviour
         ResourceManager.instance.unlockedFertilizerTypes.Add(fertilizer);
     }
 
+    /// <summary>
+    /// Unlock a tool type so it can be used by the player
+    /// </summary>
+    /// <param name="tool">The tool object</param>
     private void UnlockTool(ToolType tool)
     {
         if (debug)
@@ -213,11 +226,17 @@ public class ShopManager : MonoBehaviour
         ResourceManager.instance.unlockedToolTypes.Add(tool);
     }
 
+    /// <summary>
+    /// Unlock an additional plot in the grid
+    /// </summary>
     private void UnlockPlot()
     {
         Debug.Log("ShopManager.UnlockPlot - Not Implemented Yet");
     }
 
+    /// <summary>
+    /// Unlock a new grid which can be populated with more plots to grow stuff in
+    /// </summary>
     private void UnlockGrid()
     {
         Debug.Log("ShopManager.UnlockGrid - Not Implemented yet");

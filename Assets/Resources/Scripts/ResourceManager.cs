@@ -17,9 +17,10 @@ public class ResourceManager : MonoBehaviour
     public TextMeshProUGUI farmRankText;
 
     public int totalGrowthPoints = 0;
+    public int totalFertilizerPoints = 0;
     public int currentFarmRank = 0;
 
-    public List<PlantType> unlockedPlantTypes; 
+    public List<PlantType> unlockedPlantTypes;
     public List<FertilizerType> unlockedFertilizerTypes;
     public List<ToolType> unlockedToolTypes;
 
@@ -29,7 +30,7 @@ public class ResourceManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-        
+
         else
         {
             Debug.LogWarning("Multiple ResourceManager instances detected destroying extra instance");
@@ -47,10 +48,24 @@ public class ResourceManager : MonoBehaviour
     public void AddGrowthPoints(int points)
     {
         totalGrowthPoints += points;
-        
+
         if (debug)
             Debug.Log($"Growthpoints updated: {totalGrowthPoints}");
-        
+
+        UpdateUI();
+    }
+
+    /// <summary>
+    /// Add/update the growth points variable
+    /// </summary>
+    /// <param name="points"></param>
+    public void AddFertilizerPoints(int points)
+    {
+        totalFertilizerPoints += points;
+
+        if (debug)
+            Debug.Log($"Growthpoints updated: {totalGrowthPoints}");
+
         UpdateUI();
     }
 
@@ -71,7 +86,7 @@ public class ResourceManager : MonoBehaviour
             growthPointsText.text = $"GP: {totalGrowthPoints}";
 
         if (farmRankText != null)
-            farmRankText.text = $"Rank: {currentFarmRank}"; 
+            farmRankText.text = $"Rank: {currentFarmRank}";
     }
 
     /// <summary>
@@ -91,22 +106,44 @@ public class ResourceManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Check if the item is already available
+    /// Check if the item is already unlocked
     /// </summary>
-    /// <param name="list">The list the item is on</param>
-    /// <param name="item">The item on the list</param>
-    /// <returns></returns>
-    public bool IsItemUnlocked(Item item)
+    /// <param name="plant">The plant on the list</param>
+    /// <returns>bool</returns>
+    public bool IsPlantUnlocked(PlantType plant)
     {
-        if (unlockedPlantTypes.Contains((PlantType)item))
+        if (unlockedPlantTypes.Contains(plant))
             return true;
 
-        else if (unlockedFertilizerTypes.Contains((FertilizerType)item))
+        else
+            return false;
+    }
+
+    /// <summary>
+    /// Check if the item is already unlocked
+    /// </summary>
+    /// <param name="tool">The tool on the list</param>
+    /// <returns>bool</returns>
+    public bool IsToolUnlocked(ToolType tool)
+    {
+        if (unlockedToolTypes.Contains(tool))
             return true;
 
-        else if (unlockedToolTypes.Contains((ToolType)item))
+        else
+            return false;
+    }
+
+    /// <summary>
+    /// Check if the item is already unlocked
+    /// </summary>
+    /// <param name="fertilizer">The fertilizer on the list</param>
+    /// <returns>bool</returns>
+    public bool IsFertilizerUnlocked(FertilizerType fertilizer)
+    {
+        if (unlockedFertilizerTypes.Contains(fertilizer))
             return true;
 
-        else return false;
+        else 
+            return false;   
     }
 }

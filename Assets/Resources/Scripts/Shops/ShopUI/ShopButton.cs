@@ -10,7 +10,6 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private ShopManager shopManager;
     private Item shopItem;
-    private Shop shop;
 
     private readonly bool debug = false;
 
@@ -56,11 +55,6 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
         if (ShopInfoPopUp.Instance != null)
             ShopInfoPopUp.Instance.Hide();
-    }
-
-    public void OnButtonClick()
-    {
-        shop.BuyItem(shopItem);
     }
 
     public void OnPointerClick(PointerEventData eventData)
