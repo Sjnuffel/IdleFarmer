@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    public enum ShopCategory { Seeds, Fertilizer, Tools };
+    public enum ShopCategory { Seeds, Fertilizer, Tools, Farm };
     public ShopCategory currentCategory = ShopCategory.Seeds;
 
     [Header("Array Elements")]
@@ -22,7 +22,8 @@ public class ShopManager : MonoBehaviour
     [Header("List Elements")]
     public List<PlantType> availableSeeds;
     public List<FertilizerType> availableFertilizers;
-    public List<ToolType> availableTools; // TO DO: Needs to be changed to "ToolType", but doesn't exist yet
+    public List<ToolType> availableTools;
+    
 
     private bool debug = false;
 
@@ -110,7 +111,7 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < tabButtons.Length; i++) 
         {
             var colors = tabButtons[i].colors;
-            colors.normalColor = (i == categoryIndex) ? Color.green : Color.white; 
+            colors.selectedColor = (i == categoryIndex) ? Color.black : Color.white;
             tabButtons[i].colors = colors;
         }
     }
@@ -152,6 +153,11 @@ public class ShopManager : MonoBehaviour
             case ShopCategory.Tools:
                 PopulateGrid(availableTools, categoryGrids[(int)ShopCategory.Tools]);
                 shopTitle.text = "Tool Store";
+                break;
+
+            case ShopCategory.Farm:
+                PopulateGrid(availableTools, categoryGrids[(int)ShopCategory.Farm]);
+                shopTitle.text = "Farm Upgrades";
                 break;
         }
     }
@@ -211,7 +217,8 @@ public class ShopManager : MonoBehaviour
         if (debug)
             Debug.Log($"ShopManager.UnlockFertilizer - Fertilizer unlocked: {fertilizer.itemName}");
         
-        ResourceManager.instance.unlockedFertilizerTypes.Add(fertilizer);
+        if (!ResourceManager.instance.IsFertilizerUnlocked(fertilizer))
+            ResourceManager.instance.unlockedFertilizerTypes.Add(fertilizer);
     }
 
     /// <summary>
@@ -223,7 +230,8 @@ public class ShopManager : MonoBehaviour
         if (debug)
             Debug.Log($"ShopManager.UnlockTool - Tool unlocked: {tool.itemName}");
             
-        ResourceManager.instance.unlockedToolTypes.Add(tool);
+        if (!ResourceManager.instance.IsToolUnlocked(tool))
+            ResourceManager.instance.unlockedToolTypes.Add(tool);
     }
 
     /// <summary>

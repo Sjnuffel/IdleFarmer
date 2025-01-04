@@ -35,10 +35,10 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (debug)
             Debug.Log($"Pointer entered {shopItemNameText}");
 
-        if (ShopInfoPopUp.Instance != null)
+        if (ShopInfoPopUp.instance != null)
         {
             Vector3 mousePosition = Input.mousePosition;
-            ShopInfoPopUp.Instance.Show(
+            ShopInfoPopUp.instance.Show(
                 shopItemNameText,
                 shopItemDescriptionText,
                 shopItemDetailsText,
@@ -53,8 +53,8 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (debug)
             Debug.Log($"Pointer exited {shopItemNameText}");
 
-        if (ShopInfoPopUp.Instance != null)
-            ShopInfoPopUp.Instance.Hide();
+        if (ShopInfoPopUp.instance != null)
+            ShopInfoPopUp.instance.Hide();
     }
 
     public void OnPointerClick(PointerEventData eventData)

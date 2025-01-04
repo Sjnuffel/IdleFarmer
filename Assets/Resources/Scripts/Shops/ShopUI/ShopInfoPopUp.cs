@@ -4,7 +4,7 @@ using TMPro;
 
 public class ShopInfoPopUp : MonoBehaviour
 {
-    public static ShopInfoPopUp Instance {  get; private set; }
+    public static ShopInfoPopUp instance {  get; private set; }
 
     [Header("UI Elements")]
     public GameObject popUpBackgroundPanel;
@@ -17,7 +17,7 @@ public class ShopInfoPopUp : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (instance != null && instance != this)
         {
             Debug.LogWarning("Duplicate ShopInfoPopUp found. Destroying the duplicate.");
             Destroy(gameObject);
@@ -34,7 +34,7 @@ public class ShopInfoPopUp : MonoBehaviour
 
         canvasGroup.blocksRaycasts = false;
 
-        Instance = this;
+        instance = this;
     }
 
     // show the popup and it's contents
