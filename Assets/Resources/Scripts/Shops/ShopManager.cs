@@ -9,8 +9,8 @@ public class ShopManager : MonoBehaviour
     public ShopCategory currentCategory = ShopCategory.Seeds;
 
     [Header("Array Elements")]
-    public GameObject[] categoryGrids; // array containing the various Shop Grids
-    public Button[] tabButtons; // buttons for selecting categories
+    public GameObject[] categoryGrids;
+    public Button[] tabButtons;
 
     [Header("UI Panel Elements")]
     public GameObject shopPanel;
@@ -23,13 +23,11 @@ public class ShopManager : MonoBehaviour
     public List<PlantType> availableSeeds;
     public List<FertilizerType> availableFertilizers;
     public List<ToolType> availableTools;
-    
 
     private bool debug = false;
 
     public void Start()
     {
-        // Initialize with the first category
         SelectCategory((int)ShopCategory.Seeds);
     }
 
@@ -67,13 +65,11 @@ public class ShopManager : MonoBehaviour
                 availableSeeds.Remove(plant);
             }
 
-
             else if (item is FertilizerType fertilizer)
             {
                 UnlockFertilizer(fertilizer);
                 availableFertilizers.Remove(fertilizer);
             }
-
 
             else if (item is ToolType tool) 
             {
@@ -143,13 +139,11 @@ public class ShopManager : MonoBehaviour
                 shopTitle.text = "Seed Store";
                 break;
 
-            // to do: expand on fertilizer class, also has to unlock with rank
             case ShopCategory.Fertilizer:
                 PopulateGrid(availableFertilizers, categoryGrids[(int)ShopCategory.Fertilizer]);
                 shopTitle.text = "Fertilizer Depot";
                 break;
 
-            // to do: expand on tool class, does basically nothing yet
             case ShopCategory.Tools:
                 PopulateGrid(availableTools, categoryGrids[(int)ShopCategory.Tools]);
                 shopTitle.text = "Tool Store";
@@ -161,8 +155,6 @@ public class ShopManager : MonoBehaviour
                 break;
         }
     }
-
-    // Private SHOP functions (buying various items)
 
     /// <summary>
     /// Setup a shop's grid by providing the list of items and the grid to present it on. 

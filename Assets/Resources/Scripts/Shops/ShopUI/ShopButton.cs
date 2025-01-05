@@ -1,5 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
@@ -10,6 +13,9 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private ShopManager shopManager;
     private Item shopItem;
+
+    [SerializeField] private TextMeshProUGUI buttonText;
+    [SerializeField] private UnityEngine.UI.Image buttonIcon;
 
     private readonly bool debug = false;
 
@@ -24,7 +30,10 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
         shopManager = manager;
 
-        GetComponent<UnityEngine.UI.Image>().sprite = item.itemShopIcon;
+        GetComponentInChildren<TextMeshProUGUI>().text = shopItemNameText;
+
+        buttonText.text = shopItemNameText;
+        buttonIcon.sprite = item.itemShopIcon;
 
         if (debug)
             Debug.Log($"Plant: {shopItemNameText}, Description: {shopItemDescriptionText}, Harvest: {shopItemDetailsText},  Price: {shopItemPriceText}");

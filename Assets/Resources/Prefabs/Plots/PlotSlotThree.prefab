@@ -347,7 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0.9811321, g: 0.9775568, b: 0.06941971, a: 1}
   m_EffectDistance: {x: 5, y: 5}
-  m_UseGraphicAlpha: 1
+  m_UseGraphicAlpha: 0
 --- !u!114 &2144264401583155074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,5 +361,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plotSlotButton: {fileID: 3192957736161532910}
-  plotImage: {fileID: 0}
   currentPlant: {fileID: 0}
